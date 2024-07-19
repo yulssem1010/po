@@ -1,0 +1,961 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+@font-face {
+  font-family: 'NeoDunggeunmoPro-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/NeoDunggeunmoPro-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*  font-family: "Noto Sans KR", sans-serif; community */
+/* font-family: "DM Serif Display", serif; 타이틀, 배너*/
+/* font-family: 'NeoDunggeunmoPro-Regular'; 서브 글 요소안에 글 */
+
+.modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  display: none;
+}
+
+.modal.on {
+  display: block;
+}
+
+.modal .modal_inner {
+  width: 600px;
+  height: 300px;
+  background: #ccc;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #fff;
+  box-shadow: 5px 5px 10px #666;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.modal .modal_inner .deco_top {
+  width: 580px;
+  height: 40px;
+  background: #0400A1;
+  font-size: 20px;
+  line-height: 40px;
+  color: #fff;
+  padding-left: 10px;
+  box-shadow: inset 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.modal .modal_inner .txt_img {
+  width: 420px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal .modal_inner .txt_img .txt {
+  padding-left: 30px;
+}
+
+.modal .modal_inner .txt_img h3 {
+  font-size: 20px;
+}
+
+.modal .modal_inner .txt_img p {
+  padding-top: 10px;
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+.modal .modal_inner .answer {
+  width: 420px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal .modal_inner .answer button {
+  font-size: 20px;
+  font-family: 'NeoDunggeunmoPro-Regular';
+  width: 180px;
+  height: 50px;
+}
+
+/* main */
+main {
+  width: 100%;
+  font-family: 'NeoDunggeunmoPro-Regular';
+  font-size: 20px;
+  letter-spacing: 1.5px;
+  padding-top: 100px;
+}
+
+.main_visual .swiper-wrapper .swiper-slide a img {
+  width: 100%;
+}
+
+/* section 공통 요소 */
+main section {
+  padding: 130px 0;
+
+}
+
+main section h2 {
+  font-family: "DM Serif Display", serif;
+  font-size: 55px;
+  text-align: center;
+}
+
+/* section concept */
+/* 스크롤 이벤트용 시작*/
+main section.concept {
+  transition: 0.4s;
+  opacity: 0;
+  transform: translateY(150px);
+}
+
+main section.concept.on {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 스크롤 이벤트용 끝*/
+main section.concept .cy {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding-top: 100px;
+}
+
+main section.concept .cy .ring {
+  width: 40px;
+  height: 323px;
+  position: absolute;
+  left: 19.7%;
+  top: 230px;
+  z-index: 5;
+}
+
+/* left */
+main section.concept .cy .left {
+  width: 325px;
+  height: 600px;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #666;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+main section.concept .cy .left .statebar {
+  width: 265px;
+  height: 45px;
+  border: 1px solid #666;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+main section.concept .cy .left .statebar span {
+  font-size: 20px;
+  margin: 0 10px;
+}
+
+main section.concept .cy .left .img_txt {
+  width: 265px;
+  height: 476px;
+  margin-top: 20px;
+}
+
+main section.concept .cy .left .img_txt .txt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+  font-size: 20px;
+}
+
+main section.concept .cy .left .img_txt .txt a {
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+main section.concept .cy .left .img_txt .txt a:hover {
+  color: #D77BBD;
+  text-decoration: underline;
+}
+
+main section.concept .cy .left .img_txt .txt p {
+  margin-top: 80px;
+  border-bottom: 1px solid #111;
+  padding: 0 0 5px 0;
+}
+
+main section.concept .cy .left .img_txt .txt .music {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 15px;
+}
+
+
+main section.concept .cy .rg_tab {
+  display: flex;
+}
+
+/* rigt 공통 요소 */
+/* right */
+main section.concept .cy .rg_tab ul.right {
+  width: 1155px;
+  height: 600px;
+  position: relative;
+}
+
+main section.concept .cy .rg_tab ul.right>li {
+  width: 100%;
+  height: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  display: none;
+  border: 1px solid #666;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+main section.concept .cy .rg_tab ul.right>li.on {
+  display: flex;
+}
+
+main section.concept .cy .rg_tab ul.right li .area {
+  width: 90%;
+  height: 90%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main section.concept .cy .rg_tab ul.right li .area .tit {
+  width: 100%;
+  height: 40px;
+  background: #aaa;
+  text-align: center;
+  line-height: 40px;
+  border-top: 1px solid #666;
+}
+
+main section.concept .cy .rg_tab ul.right li .area .tit h3 {
+  font-weight: 500;
+}
+
+main section.concept .cy .rg_tab ul.right li .area .contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* scroll */
+main section.concept .cy .rg_tab ul.right li .scroll {
+  width: 30px;
+  height: 540px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+main section.concept .cy .rg_tab ul.right li .scroll button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+main section.concept .cy .rg_tab ul.right li .scroll .up,
+main section.concept .cy .rg_tab ul.right li .scroll .down {
+  width: 100%;
+  height: 32px;
+  background: #ccc;
+  border: 1px solid #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+}
+
+main section.concept .cy .rg_tab ul.right li .scroll i {
+  font-size: 30px;
+  color: #fff;
+}
+
+main section.concept .cy .rg_tab ul.right li .scroll .bar {
+  width: 100%;
+  height: 466px;
+  background: #eee;
+}
+
+main section.concept .cy .rg_tab ul.right li .scroll .bar .stick {
+  width: 100%;
+  height: 466px;
+  background: #ccc;
+  border: 1px solid #666;
+}
+
+/* tab */
+main section.concept .cy .rg_tab ul.tab {
+  width: 100px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+main section.concept .cy .rg_tab ul.tab li {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  display: flex;
+  border: 1px solid #666;
+  border-left: 0;
+  border-radius: 0px 10px 10px 0;
+  background: #fff;
+  font-size: 18px;
+  justify-content: center;
+  cursor: pointer;
+}
+
+main section.concept .cy .rg_tab ul.tab li.on {
+  background: #69ACB5;
+  color: #fff;
+}
+
+main section.concept .cy .rg_tab ul.tab li a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  text-align: center;
+}
+
+/* ul.right li 세부 디자인 */
+/* home */
+ul.right li.home p {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  border-bottom: 1px solid #666;
+  color: #69ACB5;
+  margin-top: 20px;
+}
+
+ul.right li.home .txt {
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+/* profile */
+ul.right li.profile .notice {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+ul.right li.profile .notice ul {
+  width: 75%;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+ul.right li.profile .notice ul li {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+ul.right li.profile .notice ul li:nth-child(2) {
+  line-height: 1.5;
+  height: 70px;
+}
+
+ul.right li.profile .notice ul li a {
+  display: block;
+  transition: 0.2s;
+}
+
+ul.right li.profile .notice ul li:hover a {
+  color: #D77BBD;
+  text-decoration: underline;
+}
+
+ul.right li.profile .activity {
+  width: 100%;
+  margin-top: 20px;
+}
+
+ul.right li.profile .activity .top {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  background: #eee;
+  text-align: left;
+  color: #69ACB5;
+  border-bottom: 1px solid #666;
+}
+
+ul.right li.profile .activity .top span {
+  margin-left: 10px;
+}
+
+ul.right li.profile .activity .proSwiper {
+  margin-top: 20px;
+}
+
+ul.right li.profile .activity .proSwiper .swiper-pagination-bullet-active {
+  background: #D77BBD;
+}
+
+
+/* photo */
+ul.right li.photo .area .contents p {
+  margin-top: 20px;
+}
+
+/* visitor */
+ul.right li.visitor .area .contents ul li:last-child {
+  margin-top: 30px;
+}
+
+ul.right li.visitor .area .contents ul li .name p {
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  background: #eee;
+  border-top: 1px solid #666;
+}
+
+ul.right li.visitor .area .contents ul li .name p span {
+  padding-left: 10px;
+}
+
+ul.right li.visitor .area .contents ul li .img_txt {
+  margin-top: 27px;
+  display: flex;
+  align-items: center;
+}
+
+ul.right li.visitor .area .contents ul li .img_txt img {
+  border: 1px solid #ccc;
+}
+
+ul.right li.visitor .area .contents ul li .img_txt p {
+  margin-left: 30px;
+  line-height: 1.5;
+}
+
+/* section popular */
+/* 스크롤 이벤트용 시작*/
+main section.popular {
+  background: #fff;
+  position: relative;
+  transition: 0.4s;
+  opacity: 0;
+  transform: translateY(150px);
+}
+
+main section.popular.on {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+main section.popular .inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main section.popular .shape {
+  width: 1050px;
+  height: 400px;
+  border: 5px solid #FFEAC9;
+  position: absolute;
+  right: 120px;
+  top: 290px;
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+main section.popular .shape.on {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 스크롤 이벤트용 끝 */
+main section.popular .tit {
+  width: 537px;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+main section.popular .tit h2 {
+  text-align: left;
+}
+
+main section.popular .tit p {
+  line-height: 1.5;
+}
+
+main section.popular .tit a {
+  padding: 20px 25px;
+  background: #DCB1D0;
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 2px;
+  border-radius: 20px;
+  transition: 0.2s;
+}
+
+main section.popular .tit a:hover {
+  background: #D77BBD;
+}
+
+main section.popular .folder {
+  width: 990px;
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+main section.popular .folder ul {
+  width: 930px;
+  display: flex;
+  justify-content: space-between;
+}
+
+main section.popular .folder ul li {
+  width: 265px;
+  height: 295px;
+  position: relative;
+}
+
+main section.popular .folder ul li:hover::after {
+  content: '';
+  width: 225px;
+  height: 223px;
+  position: absolute;
+  top: 55px;
+  left: -30px;
+  background-image: url(../img/folder_shape.jpg);
+  background-size: cover;
+  z-index: -1;
+  animation: folder 0.7s;
+}
+
+@keyframes folder {
+  0% {
+
+    left: 0;
+  }
+
+  100% {
+    left: -30px;
+  }
+}
+
+main section.popular .folder ul li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-image: url(../img/folder_bg.jpg);
+  background-repeat: no-repeat;
+  border-radius: 0 0 10px 10px;
+}
+
+main section.popular .folder ul li a p {
+  padding: 5px 100px 0 0;
+}
+
+main section.popular .folder ul li a p strong {
+  border-bottom: 2px solid;
+  padding-bottom: 5px;
+  font-size: 19px;
+  font-weight: 500;
+}
+
+main section.popular .folder ul li a .img {
+  width: 85%;
+  height: 210px;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid #111;
+
+}
+
+main section.popular .folder ul li a .img img {
+  transition: 0.4s;
+}
+
+main section.popular .folder ul li:hover a .img img {
+  transform: scale(1.1)
+}
+
+main section.popular .folder ul.bottom {
+  margin-left: 60px;
+}
+
+/* section monthly */
+main section.monthly {
+  /* 스크롤 이벤트용 시작*/
+  width: 100%;
+  transition: 0.4s;
+  opacity: 0;
+  transform: translateY(150px);
+}
+
+main section.monthly.on {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 스크롤 이벤트용 끝 */
+
+main section.monthly .slide_film {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  overflow: hidden;
+  padding: 70px 0;
+}
+
+main section.monthly .tit h2 {
+  text-align: left;
+}
+
+main section.monthly .slide_film div ul {
+  width: 4030px;
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 40px;
+}
+
+main section.monthly .slide_film .t_film {
+  width: 105%;
+  height: 330px;
+  background-image: url(../img/film_frame_top.jpg);
+  transform: rotate(-4deg);
+  position: relative;
+  z-index: 5;
+  left: -18px;
+}
+
+
+/* 스와이퍼를 일정한 속도로 스무스하게 돌려줌 */
+main section.monthly .slide_film div ul.swiper-wrapper {
+  transition-timing-function: linear;
+}
+
+main section.monthly .slide_film .b_film {
+  width: 105%;
+  height: 330px;
+  background-image: url(../img/film_frame_bottom.jpg);
+  transform: rotate(4deg);
+  margin-top: 60px;
+  position: relative;
+  left: -18px;
+}
+
+/* section request */
+/* 스크롤 이벤트용 시작*/
+main section.request {
+  background: #fff;
+  transition: 0.4s;
+  opacity: 0;
+  transform: translateY(150px);
+}
+
+main section.request.on {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 스크롤 이벤트용 끝 */
+main section.request .list {
+  padding-top: 100px;
+}
+
+/* .list ul li를 위로 올림 */
+main section.request .list>ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* ul.second*/
+main section.request .list ul.second {
+  padding-top: 50px;
+}
+
+/* window 공통 요소 */
+main section.request .list .window {
+  width: 650px;
+  height: 310px;
+  border: 2px solid #666;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+main section.request .list .window .bar {
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid #666;
+  border-radius: 18px 18px 0 0;
+  background: #DCB1D0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+main section.request .list .window .bar ul {
+  width: 90px;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 20px;
+}
+
+main section.request .list .window .bar ul li {
+  width: 40px;
+  height: 36px;
+}
+
+main section.request .list .window .bar ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #666;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  font-size: 26px;
+  transition: 0.2s;
+  padding-top: 3px;
+  padding-left: 1px;
+  color: #666;
+}
+
+main section.request .list li.window .bar ul li:hover a {
+  background: #666;
+  color: #fff;
+}
+
+main section.request .list li.window .bar ul li button {
+  cursor: pointer;
+  background: #fff;
+  font-size: 30px;
+  border: 2px solid #666;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  transition: 0.2s;
+}
+
+main section.request .list li.window .bar ul li:hover button {
+  background: #666;
+  color: #fff;
+}
+
+main section.request .list li.window .notice .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  padding-bottom: 0;
+}
+
+
+main section.request .list li.window .notice .top .member {
+  display: flex;
+  align-items: center;
+}
+
+main section.request .list li.window .notice .top .member img {
+  border-radius: 50px;
+}
+
+main section.request .list li.window .notice .top .member .name {
+  padding-left: 30px;
+}
+
+main section.request .list li.window .notice .top .member .name h3 {
+  padding: 10px 0;
+  border-bottom: 3px solid #DCB1D0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+main section.request .list li.window .notice .top .member .name p {
+  padding: 10px 0;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: "Noto Sans KR", sans-serif;
+  color: #666;
+}
+
+main section.request .list li.window .notice .top>p {
+  padding: 15px 20px;
+  background: #DCB1D0;
+  border-radius: 50px;
+  color: #fff;
+  transition: 0.3s;
+  font-size: 20px;
+}
+
+main section.request .list .window:hover .notice .top>p {
+  transform: scale(1.1);
+}
+
+main section.request .list li.window .notice .top>p.on {
+  background: #D77BBD;
+}
+
+main section.request .list li.window .notice .bottom {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+main section.request .list li.window .notice .bottom ul li {
+  padding-top: 20px;
+}
+
+/* section community */
+/* 스크롤 이벤트용 시작*/
+main section.community {
+  transition: 0.4s;
+  opacity: 0;
+  transform: translateY(150px);
+}
+
+main section.community.on {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 스크롤 이벤트용 끝 */
+
+/* more */
+main section.community .btn {
+  display: flex;
+  justify-content: end;
+  padding-top: 50px;
+}
+
+main section.community .btn a {
+  font-family: "DM Serif Display", serif;
+  font-size: 23px;
+  background: #666;
+  color: #fff;
+  padding: 7px 10px;
+  border-radius: 10px;
+  transition: 0.2s;
+  border: 2px solid #666;
+}
+
+main section.community .btn a:hover {
+  background: #fff;
+  border: 2px solid #666;
+  color: #666;
+}
+
+main section.community .btn a i {
+  padding-left: 5px;
+  font-size: 20px;
+}
+
+/* community chart */
+main section.community table {
+  border: 1px solid #111;
+  border-collapse: collapse;
+  margin-top: 30px;
+  background: #fff;
+}
+
+main section.community table tr .big {
+  width: 1065px;
+  height: 50px;
+  padding: 0;
+  line-height: 60px;
+}
+
+main section.community table tr .big a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding-left: 20px;
+  transition: 0.2s;
+}
+
+main section.community table tr:hover .big a {
+  background: #eee;
+}
+
+main section.community table tr td {
+  transition: 0.2s;
+}
+
+main section.community table tr:hover td {
+  background: #eee;
+}
+
+main section.community table tr .small {
+  padding: 10px 15px 10px 20px;
+}
+
+main section.community table td {
+  border: 1px solid #111;
+  padding: 15px 30px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+}
+
+main section.community table th {
+  border: 1px solid #111;
+}
+
+main section.community table tbody tr td.big {
+  text-align: left;
+}

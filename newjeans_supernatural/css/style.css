@@ -1,0 +1,406 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'LOTTERIACHAB';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/LOTTERIACHAB.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HSSanTokki20-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405@1.0/HSSanTokki20-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: #f6f6f6;
+}
+
+/* layout */
+
+/* header */
+header {
+  width: 400px;
+  height: 100%;
+  position: fixed;
+  /* position:fixed를 줘야 height:100%이 적용됨 */
+  background: #000;
+  overflow: hidden;
+}
+
+header h1 {
+  font: 50px/1.3 'LOTTERIACHAB';
+  color: #fff;
+  letter-spacing: 1px;
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-190%);
+}
+
+header h1 span:nth-child(1) {
+  color: rgb(62, 0, 163);
+}
+
+header h1 span:nth-child(2) {
+  color: rgb(114, 0, 185);
+}
+
+header h1 span:nth-child(3) {
+  color: rgb(201, 92, 168);
+}
+
+header h1 span:nth-child(4) {
+  color: rgb(244, 136, 172);
+}
+
+header h1 span:nth-child(5) {
+  color: lightpink;
+}
+
+header h1 span:nth-child(6) {
+  color: orangered;
+}
+
+header h1 span:nth-child(7) {
+  color: orange;
+}
+
+header h1 span:nth-child(8) {
+  color: rgb(255, 185, 54);
+}
+
+header h1 span:nth-child(9) {
+  color: rgb(255, 225, 0);
+}
+
+header h1 span:nth-child(10) {
+  color: rgb(255, 246, 125);
+}
+
+header h1 span:nth-child(11) {
+  color: rgb(169, 253, 124);
+}
+
+header h1 span:nth-child(12) {
+  color: rgb(106, 255, 83);
+}
+
+header p {
+  color: #fff;
+  letter-spacing: 1px;
+  font-family: 'HSSanTokki20-Regular';
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-240%);
+  line-height: 1.5;
+}
+
+header h1::after {
+  content: '';
+  display: block;
+  width: 180px;
+  height: 2px;
+  background: #fff;
+  margin-top: 20px;
+}
+
+header img {
+  position: absolute;
+  right: -55px;
+  top: 54%
+}
+
+header ul {
+  position: absolute;
+  left: 40px;
+  bottom: 100px;
+  /*   position: absolute;로 흐름에서 나왔기 때문에 li가 float를 먹어도 다른 곳에 영향을 주지 않음 */
+}
+
+header ul li {
+  float: left;
+  margin-right: 5px;
+  transition: 0.5s;
+}
+
+header ul li:hover {
+  transform: scale(1.1);
+}
+
+header ul li a {
+  color: #fff;
+  font-size: 20px;
+}
+
+header ul li a span {
+  display: inline-block;
+  /* 인라인 블럭을 준 이유는 transform쓰기 위해 (인라인 블럭 자체가 margin 4px씩 먹어있음)*/
+  font-weight: bold;
+  opacity: 0.7;
+  transform: scale(0.7) translateX(-10px);
+}
+
+/* main */
+main {
+  margin-left: 400px;
+  /* header에 가려지지 않게 */
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+main ul {
+  width: 100%;
+  margin-bottom: 10px;
+  margin-right: 20px;
+}
+
+main ul::after {
+  /* li에 float을 사용하기 때문에 clearfix를 따로 만들어줌 */
+  content: '';
+  display: block;
+  clear: both;
+}
+
+main ul li {
+  float: right;
+  width: 100px;
+  height: 26px;
+  margin-right: 20px;
+}
+
+main ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font: bold 9px/26px 'HSSanTokki20-Regular';
+  letter-spacing: 1px;
+  text-align: center;
+  background: #000;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  color: #fff;
+}
+
+main ul li.on a {
+  background: rgb(255, 202, 87);
+  box-shadow: 0 5px 20px rgba(255, 243, 109, 0.703);
+  color: #333;
+}
+
+/* section */
+main section {
+  width: 100%;
+}
+
+main section::after {
+  /* article에 float를 주기 때문에 clearfix를 만들어줌 */
+  content: '';
+  display: block;
+  clear: both;
+}
+
+main section article {
+  float: left;
+  width: 20%;
+  box-sizing: border-box;
+  padding: 12px;
+}
+
+main section article div {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  box-sizing: border-box;
+  padding: 14px;
+  border: 1px solid #000;
+}
+
+main section article div img {
+  width: 100%;
+  border: 1px solid #000;
+}
+
+main section article div h2 {
+  margin-top: 15px;
+  font: 13px/1 'HSSanTokki20-Regular';
+  letter-spacing: 1px;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+main section article div p {
+  letter-spacing: 1px;
+  font: 11px/1.2 'HSSanTokki20-Regular';
+  color: #999;
+  margin-bottom: 15px;
+}
+
+/* 반응형 */
+@media screen and (max-width:1599px) {
+  header {
+    width: 350px;
+  }
+
+  header .txt {
+    width: 80%;
+  }
+
+  header ul {
+    left: 30px;
+  }
+
+  main {
+    margin-left: 350px;
+  }
+
+  main section article {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width:1199px) {
+  header {
+    position: relative;
+    width: 100%;
+    height: 80px;
+  }
+
+  header h1 {
+    font: 25px/1 'LOTTERIACHAB';
+    transform: translateY(-50%);
+  }
+
+  header h1::before,
+  header h1::after {
+    display: none;
+  }
+
+  header .txt {
+    display: none
+  }
+
+  header img {
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    width: 65px;
+  }
+
+  header ul {
+    left: 83%;
+    bottom: 25px;
+  }
+
+  header ul li {
+    margin-right: 20px;
+  }
+
+  header ul li a {
+    font-size: 20px;
+  }
+
+  header ul li a span {
+    display: none;
+  }
+
+  main {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:1100px) {
+  header ul {
+    left: 82%;
+  }
+}
+
+@media screen and (max-width:1020px) {
+  header ul {
+    left: 80%;
+  }
+}
+
+@media screen and (max-width:930px) {
+  header ul {
+    left: 78%;
+  }
+}
+
+@media screen and (max-width:899px) {
+  header ul {
+    left: 77%;
+  }
+
+  main section article {
+    width: 33.33%;
+  }
+}
+
+@media screen and (max-width:790px) {
+  header ul {
+    left: 74%;
+  }
+}
+
+@media screen and (max-width:700px) {
+  header ul {
+    display: none;
+  }
+}
+
+@media screen and (max-width:679px) {
+  main section article {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width:539px) {
+  main section article {
+    width: 100%;
+  }
+
+  main ul {
+    margin-right: 0;
+    box-sizing: border-box;
+    padding: 0 13px;
+  }
+
+  main ul li {
+    width: 32%;
+    margin-right: 2%;
+  }
+
+  main ul li:nth-of-type(1) {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width:384px) {
+  header ul {
+    display: none;
+  }
+
+  header img {
+    display: none;
+  }
+}

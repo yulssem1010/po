@@ -1,0 +1,505 @@
+@charset "utf-8";
+
+:root {
+  --white-color: #ffffff;
+  --black-color: #111111;
+  --btn-color: #393531;
+
+  --point-color: #FAC300;
+  --persona-color: #FFDE95;
+}
+
+/* layout */
+.make {
+  font-size: 1rem;
+  position: fixed;
+  right: 30px;
+  top: 30px;
+}
+
+section {
+  padding: 100px 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* overview */
+section.overview .inner {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+section.overview .txt {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  animation: fadeleft 1s;
+}
+
+
+@keyframes fadeleft {
+  0% {
+    transform: translateX(-500px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+section.overview .txt .top h1 {
+  font-size: 4rem;
+  color: var(--point-color);
+}
+
+section.overview .txt .top p {
+  font-size: 1.5rem;
+  padding-top: 10px;
+  font-weight: 600;
+}
+
+section.overview .txt .top a {
+  display: block;
+  width: 180px;
+  height: 45px;
+  background: var(--persona-color);
+  text-align: center;
+  line-height: 45px;
+  color: var(--black-color);
+  transition: 0.3s;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+section.overview .txt .top a:hover {
+  background: var(--btn-color);
+  color: var(--white-color);
+}
+
+section.overview .txt .top a i {
+  padding-left: 10px;
+  font-size: 1.3rem;
+  animation: clickme 1s infinite
+}
+
+@keyframes clickme {
+  0% {
+    transform: translate(0);
+  }
+
+  50% {
+    transform: translateX(-3px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+section.overview .txt .middle h2 {
+  position: relative;
+}
+
+section.overview .txt .middle h2::after {
+  content: '';
+  display: block;
+  background: var(--black-color);
+  width: 40%;
+  height: 2px;
+  position: absolute;
+  left: 18%;
+  top: 50%;
+  transform: translateY(-50%);
+
+}
+
+section.overview .txt .middle ul.add {
+  padding-top: 15px;
+}
+
+section.overview .txt .middle ul.add li {
+  padding-top: 10px;
+  display: flex;
+}
+
+section.overview .txt .middle ul.add li div {
+  width: 150px;
+}
+
+section.overview .txt .bottom h2 {
+  position: relative;
+}
+
+section.overview .txt .bottom h2::after {
+  content: '';
+  display: block;
+  background: var(--black-color);
+  width: 75%;
+  height: 2px;
+  position: absolute;
+  left: 26%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+section.overview .txt .bottom p {
+  padding-top: 15px;
+  line-height: 1.7;
+}
+
+section.overview .img {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  animation: fadein 1s;
+}
+
+@keyframes fadein {
+  0% {
+    transform: translateX(500px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+section.overview .img .image-container {
+  width: 710px;
+  height: 400px;
+  position: absolute;
+  left: 43px;
+  top: 69px;
+  overflow: hidden;
+}
+
+section.overview .img .image-container img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 710px;
+}
+
+section.overview .img .image-container img:hover {
+  animation: updown ease 9s;
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-1630px);
+  }
+}
+
+/* persona */
+section.persona {
+  background: var(--persona-color);
+}
+
+section.persona .inner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+section.persona .tit {
+  color: var(--black-color);
+}
+
+section.persona .tit h2 {
+  font-size: 2.5rem;
+}
+
+section.persona .tit p {
+  padding-top: 15px;
+  line-height: 1.3;
+}
+
+section.persona .img_txt {
+  width: 100%;
+  height: 600px;
+  background: var(--white-color);
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px 0;
+  margin-top: 10px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.5s;
+}
+
+section.persona.on .img_txt {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+section.persona .img_txt .img {
+  width: 20%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section.persona .img_txt .img img {
+  width: 100%;
+}
+
+section.persona .img_txt .img p {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+section.persona .img_txt .txt {
+  width: 65%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+section.persona .img_txt .txt h4 {
+  font-size: 2rem;
+  color: var(--point-color);
+  letter-spacing: 1.5px;
+}
+
+section.persona .img_txt .txt p {
+  font-size: 1.3rem;
+  line-height: 2;
+}
+
+section.persona .img_txt .txt .po_ne {
+  display: flex;
+  justify-content: space-between;
+}
+
+section.persona .img_txt .txt .po_ne div {
+  width: 45%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+section.persona .img_txt .txt .po_ne div h5 {
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--point-color);
+}
+
+section.persona .img_txt .txt .po_ne div ul {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: 2px solid var(--point-color);
+  border-radius: 30px;
+}
+
+section.persona .img_txt .txt .po_ne div ul>li {
+  /* 밖에 있는게 기본값이라 인사이드 해줘야 함 */
+  list-style: disc inside;
+  padding-left: 30px;
+}
+
+/* li의 리스트 점 색상 변경 */
+li::marker {
+  color: var(--point-color);
+}
+
+
+/* problem */
+section.problem .inner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+section.problem .tit h2 {
+  font-size: 2.5rem;
+  color: var(--point-color);
+}
+
+section.problem .tit p {
+  padding-top: 15px;
+  line-height: 1.3;
+}
+
+section.problem .site {
+  height: 85%;
+  display: flex;
+  justify-content: space-between;
+}
+
+section.problem .site .img {
+  width: 53%;
+  display: flex;
+  justify-content: space-between;
+}
+
+section.problem .site .txt {
+  width: 40%;
+}
+
+section.problem .site .txt ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+section.problem .site .txt ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  height: 30%;
+}
+
+section.problem .site .txt ul li:nth-child(1) {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: 1s;
+}
+
+section.problem .site .txt ul li:nth-child(2) {
+  opacity: 0;
+  transform: translateX(150px);
+  transition: 1s;
+}
+
+section.problem .site .txt ul li:nth-child(3) {
+  opacity: 0;
+  transform: translateX(200px);
+  transition: 1s;
+}
+
+section.problem.on .site .txt ul li {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+section.problem .site .txt ul li h3 {
+  color: var(--point-color);
+  font-size: 1.5rem;
+}
+
+section.problem .site .txt ul li .box {
+  padding: 20px 30px;
+  border: 3px solid var(--point-color);
+  border-radius: 10px;
+}
+
+section.problem .site .txt ul li .box h5 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+section.problem .site .txt ul li .box p {
+  padding-top: 15px;
+  line-height: 1.3;
+}
+
+/* main_page */
+section.main_page {
+  width: 100%;
+  height: 2160px;
+  background: url(../img/sffs/main_page_bg.png);
+}
+
+section.main_page .page_inner {
+  position: relative;
+  height: 100%;
+}
+
+section.main_page h2 {
+  font-size: 2.5rem;
+  color: var(--point-color);
+}
+
+section.main_page p {
+  padding-top: 15px;
+}
+
+section.main_page img {
+  position: absolute;
+  left: 0;
+  top: 175px;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+section.main_page .page_inner div {
+  width: 36.5%;
+  position: absolute;
+  right: 0;
+}
+
+section.main_page .page_inner div h3 {
+  font-size: 1.5rem;
+  color: var(--point-color);
+}
+
+section.main_page .page_inner div p {
+  padding-top: 10px;
+  line-height: 1.5;
+}
+
+section.main_page .header {
+  top: 135px
+}
+
+section.main_page .banner {
+  top: 310px;
+}
+
+section.main_page .banner ul {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style: disc inside;
+}
+
+section.main_page .banner ul li {
+  font-size: 1rem;
+  padding: 5px 15px;
+}
+
+section.main_page .concept {
+  top: 569px;
+  position: relative;
+}
+
+section.main_page .popular {
+  top: 850px;
+}
+
+section.main_page .monthly {
+  bottom: 711px;
+}
+
+section.main_page .request {
+  bottom: 355px;
+}
+
+section.main_page .community {
+  bottom: 117px;
+}

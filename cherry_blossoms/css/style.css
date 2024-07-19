@@ -1,0 +1,785 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrap {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background: #94C754;
+}
+
+.background_deco {
+  width: 100%;
+  height: 100%;
+  background: url(../img/background_deco.png);
+  position: fixed;
+  top: -166px;
+}
+
+.road {
+  width: 1920px;
+  height: 1080px;
+  background: url(../img/road.png) top center;
+  position: fixed;
+  top: -166px;
+}
+
+
+/* top */
+.blossoms_t {
+  width: 520px;
+  height: 486px;
+  background: url(../img/blossoms_top.png) no-repeat;
+  position: absolute;
+}
+
+.t1 {
+  top: -220px;
+  left: 50px;
+}
+
+.t2 {
+  top: -150px;
+  left: 250px;
+}
+
+.t3 {
+  top: -150px;
+  left: 550px;
+}
+
+.bench_top {
+  width: 237px;
+  height: 162px;
+  background: url(../img/bench.png);
+  position: absolute;
+  right: 730px;
+  top: -65px;
+}
+
+.lamp_top {
+  width: 67px;
+  height: 362px;
+  background: url(../img/lamp.png);
+  position: absolute;
+  left: 625px;
+  top: -145px;
+}
+
+/* left_top */
+.toilet {
+  width: 288px;
+  height: 483px;
+  background: url(../img/toilet.png);
+  position: absolute;
+  left: -10px;
+  top: -100px;
+}
+
+.trash_top {
+  width: 65px;
+  height: 98px;
+  background: url(../img/trash.png);
+  position: absolute;
+  left: 5px;
+  top: 300px;
+}
+
+.sign {
+  width: 196px;
+  height: 282px;
+  background: url(../img/sign.png);
+  position: absolute;
+  left: 230px;
+  top: 35px;
+  cursor: pointer;
+}
+
+.bird_t {
+  width: 40px;
+  height: 35px;
+  background: url(../img/bird_top.png);
+  position: absolute;
+  left: 373px;
+  top: 40px;
+  transition: 5s;
+}
+
+.bird_t.on {
+  animation: bird_t 0.7s linear infinite;
+  transform: translate(-400px, -150px);
+}
+
+@keyframes bird_t {
+  0% {
+    width: 50px;
+    height: 53px;
+    background-image: url(../img/bird_t_fly_up.png);
+  }
+
+  100% {
+    width: 50px;
+    height: 53px;
+    background-image: url(../img/bird_t_fly_down.png);
+  }
+}
+
+.bird_b {
+  width: 50px;
+  height: 37px;
+  background: url(../img/bird_bottom.png);
+  position: absolute;
+  left: 290px;
+  top: 127px;
+  transition: 5s;
+}
+
+.bird_b.on {
+  animation: bird_b 0.5s linear infinite;
+  transform: translate(800px, -250px);
+}
+
+@keyframes bird_b {
+  0% {
+    width: 50px;
+    height: 53px;
+    background-image: url(../img/bird_b_fly_up.png);
+  }
+
+  100% {
+    width: 50px;
+    height: 53px;
+    background-image: url(../img/bird_b_fly_down.png);
+  }
+}
+
+/* 킥보드 타는 남성 자동 움직임 */
+.kicboard_auto {
+  width: 188px;
+  height: 269px;
+  background: url(../img/kicboard_auto.png);
+  position: absolute;
+  left: -500px;
+  top: 400px;
+  animation: kicboard linear 10s infinite;
+
+}
+
+@keyframes kicboard {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(3000px, -970px);
+  }
+}
+
+/* middle_right */
+.wood_fence {
+  width: 502px;
+  height: 226px;
+  background: url(../img/wood_fence.png);
+  position: absolute;
+  right: 455px;
+  top: 250px;
+}
+
+.table {
+  width: 374px;
+  height: 198px;
+  background: url(../img/table.png) no-repeat;
+  position: absolute;
+  right: -50px;
+  top: 20px;
+}
+
+.blossoms_right_middle {
+  width: 487px;
+  height: 520px;
+  background: url(../img/blossoms_right_middle.png) no-repeat;
+  position: absolute;
+  right: -205px;
+  top: -165px;
+}
+
+.grandfather {
+  width: 105px;
+  height: 262px;
+  position: absolute;
+  right: 180px;
+  top: 5px;
+}
+
+.grandfather .head {
+  width: 24px;
+  height: 34px;
+  background: url(../img/grandfather_head.png);
+  position: absolute;
+  left: 31px;
+  top: 33px;
+  animation: nod 2s infinite;
+}
+
+.grandfather .body {
+  width: 105px;
+  height: 262px;
+  background: url(../img/grandfather_body.png);
+  left: 0;
+  top: 0;
+}
+
+@keyframes nod {
+  0% {
+    transform: rotate(0);
+  }
+
+  50% {
+    transform: rotate(20deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.child {
+  width: 58px;
+  height: 183px;
+  background: url(../img/child.png);
+  position: absolute;
+  right: 480px;
+  top: 130px;
+}
+
+.ball {
+  width: 37px;
+  height: 37px;
+  background: url(../img/ball.png);
+  position: absolute;
+  right: 490px;
+  top: 110px;
+  animation: ball 3s infinite;
+}
+
+@keyframes ball {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(110px, -105px);
+  }
+
+  50% {
+    transform: translate(265px, -75px);
+  }
+
+  75% {
+    transform: translate(110px, -105px)
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.leaf_fence_middle {
+  width: 590px;
+  height: 266px;
+  background: url(../img/leaf_fence_middle.png) no-repeat;
+  position: absolute;
+  right: -90px;
+  top: 232px;
+}
+
+.manager {
+  width: 175px;
+  height: 243px;
+  background: url(../img/manager.png);
+  position: absolute;
+  right: 650px;
+  top: 50px;
+}
+
+.manager:hover::after {
+  content: '';
+  display: block;
+  width: 156px;
+  height: 40px;
+  background: url(../img/manager_hover.png);
+  position: absolute;
+  top: -30px;
+  right: -135px;
+}
+
+/* middle_left */
+
+.leaf_fence_left_middle_back {
+  width: 564px;
+  height: 267px;
+  background: url(../img/leaf_fence_middle_left_back.png);
+  position: absolute;
+  left: 595px;
+  top: 275px;
+}
+
+.blossoms_left_middle {
+  width: 480px;
+  height: 447px;
+  background: url(../img/blossoms_left_middle.png);
+  position: absolute;
+  left: 660px;
+  top: 50px;
+}
+
+.blossoms_left_middle .effect {
+  width: 440px;
+  height: 310px;
+  background: url(../img/blossoms_left_middle_effect.png);
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  transition: 0.3s;
+}
+
+.blossoms_left_middle .effect:hover {
+  transform: scale(1.05);
+}
+
+.leaf_fence_left_middle_front {
+  width: 281px;
+  height: 181px;
+  background: url(../img/leaf_fence_middle_left_front.png);
+  position: absolute;
+  left: 810px;
+  bottom: 340px;
+}
+
+.fountain {
+  width: 529px;
+  height: 590px;
+  background: url(../img/fountain.png);
+  position: absolute;
+  bottom: 40px;
+  left: 410px;
+}
+
+.fountain .water {
+  width: 7px;
+  height: 13px;
+  background: url(../img/water.png);
+  position: absolute;
+}
+
+.fountain .w1 {
+  left: 125px;
+  bottom: 220px;
+  animation: drop 1.3s infinite;
+}
+
+.fountain .w2 {
+  left: 163px;
+  bottom: 200px;
+  animation: drop 1s infinite;
+}
+
+.fountain .w3 {
+  right: 235px;
+  bottom: 200px;
+  animation: drop 0.8s infinite;
+}
+
+.fountain .w4 {
+  right: 177px;
+  bottom: 220px;
+  animation: drop 2s infinite;
+}
+
+.fountain .w5 {
+  right: 123px;
+  bottom: 250px;
+  animation: drop 1s infinite;
+}
+
+@keyframes drop {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(150px);
+    opacity: 0;
+  }
+
+}
+
+.bench_left {
+  width: 238px;
+  height: 142px;
+  background: url(../img/bench_left.png);
+  position: absolute;
+}
+
+.ben1 {
+  left: 30px;
+  bottom: 320px;
+}
+
+.ben2 {
+  left: 385px;
+  top: 335px;
+}
+
+.water_up {
+  width: 192px;
+  height: 270px;
+  position: absolute;
+  left: 584px;
+  bottom: 360px;
+  cursor: pointer;
+  animation: updown 1.3s infinite;
+}
+
+.water_up .up {
+  width: 160px;
+  height: 264px;
+  background: url(../img/water_up_up.png);
+  position: absolute;
+  left: 7px;
+  bottom: 0;
+}
+
+.water_up .effect {
+  width: 192px;
+  height: 190px;
+  background: url(../img/water_up_effect.png);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+@keyframes updown {
+  0% {
+    transform: scale(1);
+    transform-origin: bottom center;
+  }
+
+  50% {
+    transform: scale(1.2);
+    transform-origin: bottom center;
+  }
+
+  100% {
+    transform: scale(1);
+    transform-origin: bottom center;
+  }
+}
+
+.girl {
+  width: 115px;
+  height: 279px;
+  position: absolute;
+  left: 320px;
+  bottom: 215px;
+  cursor: pointer;
+}
+
+.girl:hover::after {
+  content: '';
+  display: block;
+  width: 249px;
+  height: 84px;
+  background: url(../img/girl_hover.png);
+  position: absolute;
+  left: -215px;
+  top: -70px;
+}
+
+.girl .coin {
+  width: 9px;
+  height: 7px;
+  background: url(../img/coin.png);
+  position: absolute;
+  right: 4px;
+  top: 49px;
+}
+
+.girl .coin.on {
+  animation: throw 3s 1;
+}
+
+@keyframes throw {
+  0% {
+    transform: translate(0) rotate(0) scale(1);
+  }
+
+  50% {
+    transform: translate(90px, -50px) rotate(540deg) scale(1.4);
+  }
+
+  100% {
+    transform: translate(170px, 100px) rotate(900deg) scale(1);
+  }
+}
+
+.girl .hand {
+  width: 21px;
+  height: 22px;
+  background: url(../img/girl_hand.png);
+  position: absolute;
+  right: 0;
+  top: 52px;
+}
+
+.girl .hand.on {
+  width: 21px;
+  height: 30px;
+  background: url(../img/girl_hand_click.png);
+  position: absolute;
+  right: 0;
+  top: 44px;
+}
+
+.girl .body {
+  width: 108px;
+  height: 279px;
+  background: url(../img/girl_body.png);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.blossoms_left_bottom {
+  width: 466px;
+  height: 332px;
+  background: url(../img/blossoms_left_bottom.png);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.couple {
+  width: 211px;
+  height: 273px;
+  background: url(../img/couple.png);
+  position: absolute;
+  right: 400px;
+  bottom: 350px;
+}
+
+.couple:hover::after {
+  content: '';
+  display: block;
+  width: 260px;
+  height: 83px;
+  background: url(../img/couple_hover.png);
+  position: absolute;
+  right: -200px;
+  top: -55px;
+}
+
+/* bottom_right */
+.leaf_fence_bottom {
+  width: 788px;
+  height: 354px;
+  background: url(../img/laef_fence.png);
+  position: absolute;
+  bottom: 60px;
+  right: 0;
+}
+
+.trash_bottom {
+  width: 65px;
+  height: 98px;
+  background: url(../img/trash.png);
+  position: absolute;
+  right: 540px;
+  bottom: 230px;
+}
+
+.picnic {
+  width: 668px;
+  height: 240px;
+  background: url(../img/picnic.png) no-repeat;
+  position: absolute;
+  right: 110px;
+  bottom: -100px;
+}
+
+.blossoms_bottom_right {
+  width: 342px;
+  height: 516px;
+  background: url(../img/blossoms_bottom_right.png);
+  position: absolute;
+  right: -20px;
+  bottom: 30px;
+}
+
+.lamp_bottom {
+  width: 67px;
+  height: 360px;
+  background: url(../img/lamp.png);
+  position: absolute;
+  right: 750px;
+  bottom: 185px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.lamp_bottom.on {
+  background-image: url(../img/lamp_click.png);
+}
+
+.black_boy {
+  width: 244px;
+  height: 165px;
+  background: url(../img/balck_boy.png);
+  position: absolute;
+  right: 240px;
+  bottom: 100px;
+}
+
+.black_boy:hover::after {
+  content: '';
+  display: block;
+  width: 280px;
+  height: 80px;
+  background: url(../img/black_boy_hover.png);
+  position: absolute;
+  left: -175px;
+  top: -70px;
+}
+
+.hair {
+  width: 42px;
+  height: 56px;
+  background: url(../img/hair.png);
+  position: absolute;
+  bottom: 196px;
+  right: 458px;
+}
+
+.hair.on {
+  animation: shake_down 1.5s infinite;
+}
+
+.pink_girl {
+  width: 150px;
+  height: 155px;
+  background: url(../img/pink_girl.png);
+  position: absolute;
+  right: 400px;
+  bottom: 95px;
+}
+
+.face {
+  width: 42px;
+  height: 56px;
+  background: url(../img/face.png);
+  position: absolute;
+  top: 0;
+  left: 50px;
+}
+
+.face.on {
+  animation: shake_down 1.5s infinite;
+}
+
+@keyframes shake_down {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(20deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.red_girl {
+  width: 125px;
+  height: 147px;
+  background: url(../img/red_girl.png) no-repeat;
+  position: absolute;
+  right: 170px;
+  bottom: 60px;
+}
+
+.red_boy {
+  width: 173px;
+  height: 172px;
+  background: url(../img/red_boy.png);
+  position: absolute;
+  right: 550px;
+  bottom: 60px;
+}
+
+.red_boy:hover::after {
+  content: '';
+  display: block;
+  width: 127px;
+  height: 40px;
+  background: url(../img/red_boy_hover.png);
+  position: absolute;
+  left: -53px;
+  top: -30px;
+}
+
+.red_boy .arm {
+  width: 86px;
+  height: 64px;
+  background: url(../img/arm.png);
+  position: absolute;
+  right: 6px;
+  top: 15px;
+  z-index: -1;
+}
+
+.red_boy:hover .arm {
+  animation: shake_up 1s infinite;
+}
+
+@keyframes shake_up {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(-13deg);
+    transform-origin: bottom center;
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.picnic_food {
+  width: 405px;
+  height: 105px;
+  background: url(../img/picnic_food.png);
+  position: absolute;
+  right: 230px;
+  bottom: 40px;
+}
+
+.blossoms_bottom_middle {
+  width: 520px;
+  height: 272px;
+  background: url(../img/blossoms_bottom_middle.png);
+  position: absolute;
+  right: 650px;
+  bottom: 0;
+}

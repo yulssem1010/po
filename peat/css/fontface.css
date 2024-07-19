@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+/* IBM */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
+
+.ibm {
+  font-family: "IBM Plex Sans KR", sans-serif;
+}
+
+/* 망고또박 Bold */
+.mangoB {
+  font-family: "MangoDdobak_B";
+}
+
+@font-face {
+  font-family: "MangoDdobak_B";
+  src: local("MangoDdobak-B(ttf)"),
+  url("../font/MangoDdobak-B.woff2") format("woff"),
+  url("../font/MangoDdobak-B\(ttf\).ttf") format("truetype");
+}
+
+/* 망고또박 Regular */
+.mangoR {
+  font-family: "MangoDdobak_R";
+}
+
+@font-face {
+  font-family: "MangoDdobak_R";
+  src: local("MangoDdobak-R(ttf)"),
+  url("../font/MangoDdobak-R.woff2") format("woff"),
+  url("../font/MangoDdobak-R\(ttf\).ttf") format("truetype");
+}
+
+/* 망고또박 Light */
+.mangoL {
+  font-family: "MangoDdobak_L";
+}
+
+@font-face {
+  font-family: "MangoDdobak_L";
+  src: local("MangoDdobak-L(ttf)"),
+  url("../font/MangoDdobak-L.woff2") format("woff"),
+  url("../font/MangoDdobak-L\(ttf\).ttf") format("truetype");
+}
+
+/* 양진체 */
+.yangjin {
+  font-family: "yangjin";
+}
+
+@font-face {
+  font-family: "yangjin";
+  src: local("양진체v0.9_otf"),
+  url("../font/양진체v0.9_otf.woff2") format("woff"),
+  url("../font/양진체v0.9_otf.ttf") format("truetype");
+}

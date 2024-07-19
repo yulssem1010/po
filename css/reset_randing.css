@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+/* 기본 사용 폰트 */
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Pretendard-Regular';
+  letter-spacing: 0.8px;
+  font-weight: normal;
+  font-size: 1.2rem;
+  background: #fff;
+  color: #111;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+.inner {
+  width: 1600px;
+  margin: 0 auto;
+}
+
+.page_inner {
+  width: 1400px;
+  margin: 0 auto;
+}

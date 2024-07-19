@@ -1,0 +1,150 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+/* font-family: "Noto Serif", serif; */
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: url(../img/mouse_cursor_point.png), auto;
+}
+
+img {
+  vertical-align: top;
+}
+
+body {
+  background: #393531;
+  color: #fff;
+  font-family: 'Pretendard';
+  letter-spacing: 1px;
+  cursor: url(../img/mouse_cursor.png), auto;
+}
+
+.h_container {
+  width: 1800px;
+  margin: 0 auto;
+}
+
+.container {
+  width: 1600px;
+  margin: 0 auto;
+}
+
+/* header */
+header {
+  width: 100%;
+  height: 110px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  background: #393531;
+}
+
+header .h_top {
+  width: 100%;
+  height: 60px;
+  background: #393531;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 120;
+}
+
+header .h_top nav {
+  width: 50%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+
+header .h_top nav ul {
+  display: flex;
+}
+
+header .h_top nav ul li {
+  flex: 1;
+  margin-right: 10px;
+  height: 50px;
+  line-height: 50px;
+  letter-spacing: 1px;
+  background: #555;
+  color: #FFBECE;
+  border-radius: 15px 15px 0 0;
+  cursor: url(../img/mouse_cursor_point.png), auto;
+}
+
+header .h_top nav ul li.on {
+  background: #FFBECE;
+  color: #fff;
+}
+
+header .h_bottom {
+  width: 100%;
+  height: 50px;
+  background: #555;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .h_bottom ul.deco {
+  width: 25%;
+  height: 100%;
+  display: flex;
+}
+
+header .h_bottom ul.deco li {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: url(../img/mouse_cursor_point.png), auto;
+  position: relative;
+}
+
+header .h_bottom ul.deco li:last-child::after {
+  content: 'contact me?';
+  display: none;
+  width: 120px;
+  position: absolute;
+  left: 70px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: #FFBECE;
+}
+
+header .h_bottom ul.deco li:last-child:hover::after {
+  display: block;
+}
+
+header .h_bottom ul.deco li.on {
+  background: #FFBECE;
+}
+
+header .h_bottom p {
+  width: 55%;
+  font-size: 1.3rem;
+  font-weight: 300;
+}

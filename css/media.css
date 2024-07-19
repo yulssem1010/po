@@ -1,0 +1,990 @@
+@charset "utf-8";
+/* 계속 화면 확인하면서 스크롤 생길때마다 px값 깨주기 */
+@media screen and (max-width:1799px) {
+  .h_container {
+    width: 100%;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  header .h_bottom ul.deco {
+    width: 30%;
+    height: 100%;
+    display: flex;
+  }
+
+
+  section.home .tit p span.line {
+    width: 43%;
+    height: 2px;
+  }
+
+  @keyframes line {
+    0% {
+      width: 0;
+    }
+
+    100% {
+      width: 45%;
+    }
+  }
+}
+
+@media screen and (max-width:1557px) {
+  html {
+    font-size: 14px;
+  }
+
+  section.home .tit img.deco {
+    left: 4%;
+    top: 23.5%;
+  }
+
+  section.home .tit img.sparkle {
+    right: 27%;
+    top: 40%;
+  }
+
+  section.about .notice .img .around_back {
+    left: -15px;
+    top: 70px;
+  }
+
+  section.about .notice .img .around_front {
+    left: 13px;
+    top: 138px;
+  }
+
+  section.contents .swiper .swiper-button-next {
+    padding-right: 15px;
+  }
+
+  section.contents .swiper .swiper-button-prev {
+    padding-left: 15px;
+  }
+
+  section.contents .swiper {
+    top: 51%;
+  }
+
+  section.contents .img img {
+    width: 600px;
+  }
+
+  section.clonecoding .container ul li {
+    width: 420px;
+    height: 240px;
+  }
+
+  section.clonecoding .container ul li:hover .hovertxt {
+    top: calc(240px - 35%);
+  }
+
+  section.clonecoding .container ul li .hovertxt {
+    height: 35%;
+    top: 250px;
+  }
+}
+
+@media screen and (max-width:1368px) {
+  html {
+    font-size: 14px;
+  }
+
+  header .h_top nav {
+    width: 55%;
+  }
+
+  header .h_top nav ul li {
+    margin-right: 5px;
+  }
+
+  section.home .tit h2 {
+    font-size: 8rem;
+  }
+
+  section.contents .swiper .swiper-button-next {
+    padding-right: 15px;
+  }
+
+  section.contents .swiper .swiper-button-prev {
+    padding-left: 15px;
+  }
+
+  section.clonecoding .container ul li {
+    width: 380px;
+    height: 210px;
+  }
+
+  section.clonecoding .container ul li:hover .hovertxt {
+    top: calc(210px - 35%);
+  }
+
+  section.clonecoding .container ul li .hovertxt {
+    width: 100%;
+    height: 35%;
+    top: 210px;
+  }
+
+  section.clonecoding .container ul li .hovertxt .txt h3 {
+    font-size: 1.4rem;
+  }
+
+  section.clonecoding .container ul li .btn {
+    height: 35px;
+  }
+}
+
+@media screen and (max-width:1220px) {
+  header .h_top nav {
+    width: 60%;
+  }
+
+  header .h_bottom ul.deco {
+    width: 30%;
+  }
+
+  header .h_bottom ul.deco li img {
+    width: 55%;
+  }
+
+  section.home .tit img.deco {
+    left: 1%;
+    top: 30.5%;
+    width: 27%;
+  }
+
+  section.home .tit img.sparkle {
+    right: 30.5%;
+    top: 41.5%;
+  }
+
+  section.home .tit p span.line {
+    width: 35%;
+    height: 2px;
+  }
+
+  @keyframes line {
+    0% {
+      width: 0;
+    }
+
+    100% {
+      width: 35%;
+    }
+  }
+
+  section.home .tit h2 {
+    font-size: 7rem;
+  }
+
+  section.about .notice {
+    width: 26%;
+  }
+
+  section.about .notice .img>img {
+    width: 230px;
+  }
+
+  section.about .notice .img .around_back {
+    left: -60px;
+    top: 69px;
+    width: 380px;
+  }
+
+  section.about .notice .img .around_back img {
+    width: 99.5%;
+  }
+
+  section.about .notice .img .around_front {
+    left: -34px;
+    top: 130px;
+    width: 380px;
+  }
+
+  section.about .notice .img .around_front img {
+    width: 100%;
+  }
+
+  section.about .per_lic {
+    width: 25%;
+  }
+
+  section.about .skills {
+    width: 25%;
+  }
+
+  section.contents .swiper .swiper-button-next::after {
+    padding-right: 0px;
+    font-size: 2.5rem;
+  }
+
+  section.contents .swiper .swiper-button-prev::after {
+    padding-left: 0px;
+    font-size: 2.5rem;
+  }
+
+  section.contents .img {
+    padding-top: 35px;
+  }
+
+  section.contents .img img {
+    width: 530px;
+  }
+
+  section.contents .txt {
+    width: 45%;
+    height: 460px;
+  }
+
+  section.clonecoding .container ul li {
+    width: 340px;
+    height: 190px;
+  }
+
+  section.clonecoding .container ul li:hover .hovertxt {
+    top: calc(190px - 35%);
+  }
+
+  section.clonecoding .container ul li .hovertxt {
+    top: 190px;
+  }
+}
+
+@media screen and (max-width:1073px) {
+  html {
+    font-size: 12px;
+  }
+
+  .modal button {
+    right: 20px;
+  }
+
+  .modal .modal_inner {
+    width: 90%;
+  }
+
+  .modal .modal_inner .person {
+    width: 450px;
+  }
+
+  .modal .modal_inner .contact {
+    width: 400px;
+  }
+
+  .modal .modal_inner .txt {
+    width: 310px;
+    height: 25%;
+    right: 44px;
+    top: 60px;
+  }
+
+  header .h_top nav {
+    width: 58%;
+  }
+
+  header .h_top nav ul li {
+    margin-right: 5px;
+  }
+
+  header .h_bottom ul.deco {
+    width: 33%;
+  }
+
+  header .h_bottom p {
+    width: 58%;
+  }
+
+  section.home>p {
+    font-size: 1.1rem;
+  }
+
+  section.home .tit img.deco {
+    left: 0;
+    top: 35%;
+  }
+
+  section.home .tit img.sparkle {
+    width: 35px;
+    right: 31%;
+    top: 44%;
+  }
+
+  section.about .notice {
+    width: 26%;
+  }
+
+  section.about .notice .img .around_back {
+    left: -60px;
+    top: 69px;
+    width: 350px;
+  }
+
+  section.about .notice .img .around_back img {
+    width: 99.4%;
+  }
+
+  section.about .notice .img .around_front {
+    left: -37px;
+    top: 125px;
+    width: 350px;
+  }
+
+  section.about .notice .img .around_front img {
+    width: 100%;
+  }
+
+  section.about .per_lic {
+    width: 25%;
+  }
+
+  section.about .per_lic ul {
+    font-size: 1.7rem;
+  }
+
+  section.about .skills {
+    width: 25%;
+  }
+
+  section.contents .bg {
+    height: 380px;
+  }
+
+  section.contents .swiper {
+    height: 550px;
+    position: relative;
+    top: 51%;
+  }
+
+  section.contents .swiper .swiper-button-next::after {
+    font-size: 2rem;
+    padding-bottom: 10px;
+  }
+
+  section.contents .swiper .swiper-button-prev::after {
+    font-size: 2rem;
+    padding-bottom: 10px;
+  }
+
+  section.contents .img img {
+    width: 500px;
+  }
+
+  section.contents .txt {
+    width: 43%;
+    height: 400px;
+  }
+
+  section.contents .txt .details {
+    height: auto;
+  }
+
+  section.contents .txt .btn {
+    width: 380px;
+  }
+
+  section.contents .txt .btn a {
+    width: 170px;
+    height: 50px;
+    line-height: 50px;
+  }
+
+  section.clonecoding .container ul li {
+    width: 310px;
+    height: 180px;
+  }
+
+  section.clonecoding .container ul li .hovertxt {
+    top: 180px;
+    padding: 10px 20px;
+  }
+
+  section.clonecoding .container ul li:hover .hovertxt {
+    top: calc(180px - 35%);
+  }
+
+
+  section.thanks .tit h2::after {
+    background: url(../img/sparkle2_media.png);
+    width: 50px;
+    height: 68px;
+    right: 0;
+    top: 0;
+  }
+}
+
+/* about, contents 섹션마다 height 값 문제 생김 밑으로 밀리는 느낌 */
+@media screen and (max-width:969px) {
+  section.home .tit h2 {
+    font-size: 6.8rem;
+  }
+
+  section.about {
+    height: auto;
+    padding: 100px 0;
+  }
+
+  section.about .container {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  section.about .container>div:nth-child(1),
+  section.about .container>div:nth-child(2) {
+    margin-top: 100px;
+  }
+
+  section.about .container>div:nth-child(3) {
+    margin-top: 100px;
+  }
+
+  section.about .notice,
+  section.about .per_lic {
+    width: 35%;
+  }
+
+  section.about .notice .img .around_back {
+    left: -30px;
+    top: 69px;
+    width: 350px;
+  }
+
+  section.about .notice .img .around_front {
+    left: -7px;
+    top: 124px;
+    width: 350px;
+  }
+
+  section.about .skills {
+    width: 40%;
+  }
+
+  section.contents .bg {
+    /* height: 750px; */
+    display: none;
+  }
+
+  section.contents .swiper .swiper-button-next::after {
+    padding-right: 0px;
+    font-size: 2.5rem;
+  }
+
+  section.contents .swiper .swiper-button-prev::after {
+    padding-left: 0px;
+    font-size: 2.5rem;
+  }
+
+  section.contents .swiper .swiper-pagination {
+    position: absolute;
+    top: 51%
+  }
+
+  section.contents {
+    height: auto;
+    padding: 100px 0;
+  }
+
+  section.contents .swiper {
+    transform: translateY(0);
+    height: auto;
+    margin-top: 30px;
+  }
+
+  section.contents .img img {
+    width: 450px;
+  }
+
+  section.contents .txt {
+    width: 60%;
+  }
+
+  section.contents .container {
+    flex-wrap: wrap;
+  }
+
+  section.clonecoding .container {
+    height: auto;
+    position: relative;
+  }
+
+  section.clonecoding .container .tit {
+    position: relative;
+    text-align: center;
+  }
+
+  section.clonecoding .container .tit p {
+    text-align: center;
+  }
+
+  section.clonecoding .container .clone_deco {
+    display: none;
+  }
+
+  section.clonecoding .container .clone_deco .clone_planet {
+    display: none;
+  }
+
+  section.clonecoding .container ul {
+    flex-direction: column;
+    height: auto;
+  }
+
+  section.clonecoding .container ul li:nth-child(1) {
+    margin-top: 60px;
+    align-self: flex-start;
+    margin: 60px 0;
+  }
+
+  section.clonecoding .container ul li:nth-child(3) {
+    align-self: flex-end;
+    margin: 60px 0;
+  }
+}
+
+@media screen and (max-width:898px) {
+  section.home .tit p {
+    width: 100%;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+  }
+
+  section.home .tit p span strong {
+    font-size: 1.9rem;
+  }
+
+  section.home .tit h2 {
+    font-size: 6.2rem;
+  }
+
+  section.home .tit p span.line {
+    width: 28%;
+    height: 2px;
+  }
+
+  @keyframes line {
+    0% {
+      width: 0;
+    }
+
+    100% {
+      width: 28%;
+    }
+  }
+}
+
+@media screen and (max-width:830px) {
+  header .h_top nav {
+    width: 65%;
+  }
+
+  header .h_bottom ul.deco {
+    width: 37%;
+  }
+
+  header .h_bottom p {
+    width: 58%;
+  }
+
+  .modal .modal_inner {
+    height: 550px;
+  }
+
+  .modal .modal_inner .person {
+    width: 350px;
+  }
+
+  .modal .modal_inner .contact {
+    width: 300px;
+  }
+
+  .modal .modal_inner .txt {
+    width: 240px;
+    height: 25%;
+    right: 30px;
+    top: 42px;
+  }
+
+  .modal .modal_inner .txt h3 {
+    font-size: 27px;
+  }
+
+  .modal .modal_inner .txt .add p {
+    font-size: 15px;
+  }
+
+  @keyframes line {
+    0% {
+      width: 0;
+    }
+
+    100% {
+      width: 30%;
+    }
+  }
+
+  section.home .tit img.deco {
+    display: none;
+  }
+
+  section.home .tit img.sparkle {
+    display: none;
+  }
+
+  section.home .tit p span.line {
+    display: none;
+  }
+
+  section.home .tit p {
+    width: 100%;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+  }
+
+  section.home .tit p span strong {
+    font-size: 1.9rem;
+  }
+
+  section.home .tit h2 {
+    font-size: 4.9rem;
+  }
+}
+
+@media screen and (max-width:750px) {
+  section.about .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  section.about .notice,
+  section.about .per_lic,
+  section.about .skills {
+    width: 50%;
+    height: 580px;
+  }
+
+  section.about .skills {
+    margin-top: 130px;
+  }
+
+  section.contents .img img {
+    width: 420px;
+  }
+
+  section.contents .txt {
+    width: 70%;
+  }
+
+  section.contents .txt h2 {
+    font-family: "Noto Serif", serif;
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  section.contents .txt .details {
+    height: 250px;
+  }
+
+  section.contents .txt .details p.tit {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  section.contents .txt .btn {
+    width: 100%;
+  }
+
+  section.contents .txt .btn a {
+    width: 170px;
+    height: 50px;
+    line-height: 50px;
+  }
+
+  section.thanks .tit h2 {
+    font-size: 6rem;
+    width: 100%;
+  }
+
+  section.thanks .tit h2::after {
+    right: -10px;
+    top: -10px;
+  }
+}
+
+@media screen and (max-width:663px) {
+  header {
+    height: auto;
+  }
+
+  header .h_top {
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    height: auto;
+  }
+
+  header .h_top nav {
+    width: 100%;
+  }
+
+  header .h_top nav ul li {
+    margin-right: 3px;
+  }
+
+  header .h_bottom {
+    display: none;
+  }
+
+  section.home>p {
+    display: none;
+  }
+
+  section.home .tit {
+    text-align: center;
+  }
+
+  section.home .tit p {
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.5;
+  }
+
+  section.home .tit h2 {
+    padding-top: 10px;
+    font-size: 5.5rem;
+    line-height: 1.2;
+  }
+
+  section.thanks .tit h2 {
+    font-size: 6rem;
+  }
+
+  section.thanks .tit h2::after {
+    background: url(../img/sparkle2_media660.png);
+    width: 40px;
+    height: 54px;
+    right: 0;
+    top: 0;
+  }
+}
+
+@media screen and (max-width:635px) {
+  .modal button img {
+    width: 60px;
+  }
+
+  .modal .modal_inner {
+    height: 440px;
+  }
+
+  .modal .modal_inner .person {
+    width: 270px;
+  }
+
+  .modal .modal_inner .contact {
+    width: 230px;
+  }
+
+  .modal .modal_inner .txt {
+    width: 185px;
+    height: 23%;
+    right: 22px;
+    top: 34px;
+  }
+
+  .modal .modal_inner .txt h3 {
+    font-size: 18px;
+  }
+
+  .modal .modal_inner .txt .add p {
+    font-size: 12px;
+    padding-top: 5px;
+  }
+
+  section.thanks .tit span {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width:558px) {
+
+  section.about .notice,
+  section.about .per_lic,
+  section.about .skills {
+    width: 60%;
+    height: 580px;
+  }
+
+  section.thanks .tit h2 {
+    font-size: 4.7rem;
+  }
+
+  section.thanks .tit span {
+    line-height: 1.5;
+  }
+
+  section.thanks .tit h2::after {
+    right: -10px;
+    top: -15px;
+  }
+
+  section.contents .img img {
+    width: 370px;
+  }
+
+  section.contents .txt {
+    width: 90%;
+  }
+
+  section.contents .swiper .swiper-button-next {
+    padding-right: 0;
+  }
+
+  section.contents .swiper .swiper-button-next::after {
+    font-size: 2rem;
+  }
+
+  section.contents .swiper .swiper-button-prev {
+    padding-left: 0;
+  }
+
+  section.contents .swiper .swiper-button-prev::after {
+    font-size: 2rem;
+  }
+
+  section.contents .swiper .swiper-pagination {
+    top: 48%
+  }
+}
+
+@media screen and (max-width:495px) {
+  .modal .modal_inner {
+    height: 335px;
+  }
+
+  .modal .modal_inner .person {
+    width: 200px;
+  }
+
+  .modal .modal_inner .contact {
+    width: 180px;
+  }
+
+  .modal .modal_inner .txt {
+    width: 145px;
+    height: 24%;
+    right: 17px;
+    top: 26px;
+  }
+
+  .modal .modal_inner .txt h3 {
+    font-size: 15px;
+  }
+
+  .modal .modal_inner .txt .add p {
+    font-size: 9px;
+    padding-top: 3px;
+  }
+
+  section.about .notice .img .around_back {
+    left: -53px;
+    top: 69px;
+    width: 350px;
+  }
+
+  section.about .notice .img .around_front {
+    left: -30px;
+    top: 124px;
+    width: 350px;
+  }
+}
+
+/* 선생님 도와주세요 (ul밑 부분이 잘림 section의 height값의 부족..?) */
+@media screen and (max-width:457px) {
+  section.clonecoding {height: auto;}
+  section.clonecoding .container ul {
+    background: #ccc;
+  }
+}
+
+@media screen and (max-width:450px) {
+  section.about .notice .img .around_back {
+    left: -53px;
+    top: 69px;
+    width: 350px;
+  }
+
+  section.about .notice .img .around_front {
+    left: -30px;
+    top: 124px;
+    width: 350px;
+  }
+
+  section.contents .txt {
+    height: 470px;
+  }
+
+  section.contents .txt .btn {
+    width: 100%;
+    display: block;
+  }
+
+  section.contents .txt .btn a {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  section.contents .txt .btn a:first-child {
+    margin-top: 0;
+  }
+
+  section.contents .swiper .swiper-pagination {
+    top: 45%
+  }
+
+  section.thanks .tit h2 {
+    font-size: 4.4rem;
+  }
+
+  section.thanks .tit span {
+    font-size: 1.3rem;
+    padding-top: 0;
+  }
+
+  section.thanks .tit h2::after {
+    background: url(../img/sparkle2_media_finally.png);
+    right: -5px;
+    top: -5px;
+    width: 30px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width:420px) {
+  html {
+    font-size: 11px;
+  }
+  .wrap{overflow: hidden;}
+}
+
+@media screen and (max-width:386px) {
+  header .h_top {
+    width: 90;
+    display: block;
+  }
+
+  header .h_top nav {
+    width: 100%;
+  }
+
+  header .h_top nav ul li {
+    margin-right: 2px;
+  }
+
+  header .h_top nav ul li {
+    width: 20%;
+  }
+}

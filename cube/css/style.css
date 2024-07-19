@@ -1,0 +1,503 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  outline: 0;
+}
+
+body {
+  font: 17px/1.4 "Orbitron", sans-serif;
+  letter-spacing: 1px;
+  color: #ddd;
+  background: #000;
+}
+
+.wrap {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  /* 원근감을 주기 위함 */
+  perspective: 1300px;
+}
+
+.wrap>video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: fixed;
+  opacity: 0.5;
+}
+
+.wrap>#circle {
+  width: 600px;
+  height: 800px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  /* width, height 가 600,800이니까 그의 반 이동하면 센터 */
+  margin-top: -400px;
+  margin-left: -300px;
+  /* 안에 있는 애들에게도 transform을 먹이기 위해 적용 */
+  transform-style: preserve-3d;
+  animation: ani linear 30s infinite;
+}
+
+@keyframes ani {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.wrap>#circle article {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  /* 뒷면이 안보이게 함 */
+  backface-visibility: hidden;
+}
+
+.wrap>#circle article h1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 30px;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.wrap>#circle article:hover h1 {
+  top: -60px;
+  opacity: 1;
+}
+
+.wrap>#circle article .inner {
+  width: 100%;
+  height: 100%;
+}
+
+.wrap>#circle article .inner>div {
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 50px;
+  position: relative;
+  opacity: 0.7;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.wrap>#circle article .inner>div:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.03);
+  opacity: 1;
+}
+
+.wrap>#circle article .inner>div:hover h2 {
+  color: lightcyan;
+  text-shadow: 0 0 10px aqua;
+}
+
+.wrap>#circle article .inner>div:hover i {
+  color: lightcyan;
+  text-shadow: 0 0 10px aqua;
+  transform: scale(1.2);
+  opacity: 1;
+
+}
+
+/* face 1 */
+.wrap>#circle article.face1 .inner {}
+
+.wrap>#circle article.face1 .inner>div {
+  width: 290px;
+  height: 254px;
+  margin-bottom: 20px;
+  text-align: center;
+  float: left;
+}
+
+.wrap>#circle article.face1 .inner>div:nth-child(even) {
+  float: right;
+}
+
+.wrap>#circle article.face1 .inner>div h2 {
+  margin-top: 20px;
+  letter-spacing: 2px;
+  transition: 0.5s;
+}
+
+.wrap>#circle article.face1 .inner>div p i {
+  font-size: 100px;
+  transition: 0.5s;
+  opacity: 0.7;
+}
+
+/* face2 */
+.wrap>#circle article.face2>div img {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.wrap>#circle article.face2>div h3 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.wrap>#circle article.face2>div p {
+  font: 18px/1.3 'arial';
+  color: #ccc;
+}
+
+/* face 3 */
+.wrap>#circle article.face3 .inner>div {
+  width: 100%;
+  height: 253px;
+  margin-bottom: 20px;
+}
+
+.wrap>#circle article.face3 .inner>div .pic {
+  width: 120px;
+  height: 120px;
+  background-repeat: no-repeat;
+  background-position: center top;
+  overflow: hidden;
+  border-radius: 60px;
+  border: 1px solid #fff;
+  position: relative;
+  float: left;
+  /* 지정된 영역에 이미지를 딱 맞게 함*/
+  background-size: cover;
+  top: 15px;
+  margin-right: 20px;
+}
+
+.wrap>#circle article.face3 .inner>div:nth-child(1) .pic {
+  background-image: url(../img/member1.jpg);
+}
+
+.wrap>#circle article.face3 .inner>div:nth-child(2) .pic {
+  background-image: url(../img/member2.jpg);
+}
+
+.wrap>#circle article.face3 .inner>div:nth-child(3) .pic {
+  background-image: url(../img/member3.jpg);
+}
+
+.wrap>#circle article.face3 .inner>div .con {
+  width: 340px;
+  float: right;
+}
+
+.wrap>#circle article.face3 .inner>div .con h2 {
+  color: #fff;
+}
+
+.wrap>#circle article.face3 .inner>div .con p {
+  font: 18px/1.3 'arial';
+  color: #ddd;
+  margin-top: 20px;
+}
+
+.wrap>#circle article.face3 .inner>div .con span {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  font: 12px/1 "Orbitron", sans-serif;
+  color: aqua;
+  opacity: 0.5;
+}
+
+/* face 4 */
+.wrap>#circle article.face4 .inner>div p {
+  font: 16px/1.3 'arial';
+  color: #bbb;
+}
+
+.wrap>#circle article.face4 .inner>div:nth-child(1) {
+  width: 100%;
+  height: 600px;
+  margin-bottom: 20px;
+}
+
+.wrap>#circle article.face4 .inner>div:nth-child(1) video {
+  width: 100%;
+  border: 1px solid #fff;
+  margin-bottom: 30px;
+}
+
+.wrap>#circle article.face4 .inner>div:nth-child(2) {
+  width: 100%;
+  height: 180px;
+}
+
+.wrap>#circle article.face4 .inner>div:nth-child(2) h2 {}
+
+.wrap>#circle article.face4 .inner>div:nth-child(2) p {}
+
+.wrap>#circle article.face4 .inner>div:nth-child(2) em {
+  font-size: 12px;
+  color: #ccc;
+  margin-top: 23px;
+}
+
+/* face 5 */
+.wrap>#circle article.face5>div img {
+  margin-bottom: 40px;
+}
+
+.wrap>#circle article.face5>div .pic {
+  width: 100%;
+  height: 250px;
+  border: 1px solid #bbb;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.3) url(../img/robot.png) no-repeat center center/cover;
+  margin-bottom: 50px;
+}
+
+.wrap>#circle article.face5>div .reflection {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  transition: 0.5s;
+}
+
+.wrap>#circle article.face5:hover>div .reflection {
+  top: -40%;
+}
+
+/* face 6 */
+.wrap>#circle article.face6 .inner>div {
+  width: 100%;
+  height: 185px;
+  margin-bottom: 20px;
+}
+
+.wrap>#circle article.face6 .inner>div i {
+  width: 22%;
+  /* height 값이 부모인 div에 있음 */
+  height: 100%;
+  float: left;
+  border-right: 1px solid #bbb;
+  font-size: 50px;
+  color: #fff;
+  line-height: 90px;
+  box-sizing: border-box;
+  padding-left: 15px;
+}
+
+.wrap>#circle article.face6 .inner>div .con {
+  width: 75%;
+  height: 100%;
+  float: right;
+  box-sizing: border-box;
+  padding-left: 40px;
+}
+
+.wrap>#circle article.face6 .inner>div .con p {
+  font: 18px/1 'arial';
+  color: #999;
+}
+
+/* face 7 */
+.wrap>#circle article.face7 .inner>div>div {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 1px solid #aaa;
+  overflow: hidden;
+  position: relative;
+}
+
+.wrap>#circle article.face7 .inner>div>div video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+.wrap>#circle article.face7 .inner>div>div h2 {
+  position: absolute;
+  top: 140px;
+  left: 50px;
+  font-size: 40px;
+  color: #fff;
+  line-height: 1.1;
+  text-shadow: 2px 2px 5px #555;
+  z-index: 2;
+}
+
+.wrap>#circle article.face7 .inner>div>div img:nth-of-type(1) {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.wrap>#circle article.face7 .inner>div>div img:nth-of-type(2) {
+  position: absolute;
+  bottom: 85px;
+  right: -18px;
+  width: 90%;
+}
+
+/* face 8 */
+.wrap>#circle article.face8 .inner {}
+
+.wrap>#circle article.face8 .inner>div:nth-of-type(1) {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 20px;
+}
+
+.wrap>#circle article.face8 .inner>div:nth-of-type(1) i {
+  color: #fff;
+  font-size: 200px;
+  position: absolute;
+  bottom: 60px;
+  left: 50px;
+  opacity: 0.9;
+}
+
+.wrap>#circle article.face8 .inner>div:nth-of-type(1) span {
+  font-weight: bold;
+  font-size: 120px;
+  position: absolute;
+  bottom: 80px;
+  right: 60px;
+}
+
+.wrap>#circle article.face8 .inner>div:nth-of-type(1) span em {
+  position: absolute;
+  right: -20px;
+  top: -20px;
+  font: bold normal 60px/1 'arial';
+}
+
+.wrap>#circle article.face8 .inner>div:nth-of-type(2) {
+  width: 290px;
+  height: 380px;
+  float: left;
+}
+
+.wrap>#circle article.face8 .inner>div:nth-of-type(2) i {
+  font-size: 120px;
+  color: #fff;
+  opacity: 0.8;
+}
+
+.wrap>#circle article.face8 .inner>div:nth-of-type(2) h3 {
+  margin-top: 30px;
+  margin-bottom: 14px;
+  font: bold 20px/1 'Orbitron', sans-serif;
+}
+
+.wrap>#circle article.face8 .inner>div:nth-of-type(2) p {
+  font: 16px/1 'arial';
+  color: #ccc;
+}
+
+.wrap>#circle article.face8 .inner>div:nth-of-type(2) h4 {
+  font-size: 40px;
+  margin-top: 20px;
+  letter-spacing: 3px;
+  position: relative;
+}
+
+.wrap>#circle article.face8 .inner>div:nth-of-type(2) h4 b {
+  font: bold 24px/1 'arial';
+  color: #bbb;
+  position: absolute;
+  right: 90px;
+  top: 0;
+}
+
+.wrap>#circle article.face8 .inner>div:nth-of-type(3) {
+  width: 290px;
+  height: 380px;
+  float: right;
+  text-align: center;
+}
+
+.wrap>#circle article.face8 .inner>div:nth-of-type(3) i {
+  font-size: 120px;
+  color: #fff;
+  opacity: 0.8;
+}
+
+.wrap>#circle article.face8 .inner>div:nth-of-type(3) h3 {
+  margin-top: 30px;
+  margin-bottom: 14px;
+  font: bold 20px/1 'Orbitron', sans-serif;
+}
+
+.wrap>#circle article.face8 .inner>div:nth-of-type(3) p {
+  font: 16px/1 'arial';
+  color: #ccc;
+}
+
+.wrap>#circle article.face8 .inner>div:nth-of-type(3) h4 {
+  font-size: 40px;
+  margin-top: 20px;
+  letter-spacing: 3px;
+  position: relative;
+}
+
+.wrap>#circle article.face8 .inner>div:nth-of-type(3) h4 b {
+  font: bold 24px/1 'arial';
+  color: #ddd;
+  position: absolute;
+  right: 40px;
+  top: 0;
+}
+
+.face1 {
+  transform: rotateY(0deg) translateZ(-764px);
+}
+
+.face2 {
+  transform: rotateY(45deg) translateZ(-764px);
+}
+
+.face3 {
+  transform: rotateY(90deg) translateZ(-764px);
+}
+
+.face4 {
+  transform: rotateY(135deg) translateZ(-764px);
+}
+
+.face5 {
+  transform: rotateY(180deg) translateZ(-764px);
+}
+
+.face6 {
+  transform: rotateY(225deg) translateZ(-764px);
+}
+
+.face7 {
+  transform: rotateY(270deg) translateZ(-764px);
+}
+
+.face8 {
+  transform: rotateY(315deg) translateZ(-764px);
+}
